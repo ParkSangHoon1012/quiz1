@@ -77,6 +77,25 @@ class UdonKiosk:
     def total_sales(self):
         pass
 
+kiosk = UdonKiosk(3)
+kiosk.order("2")
+kiosk.order("abc")
+kiosk.order("5")
+kiosk.order("1")
+kiosk.order("1")
+kiosk.total_sales()
+# 14000
+(stock 1, sold 2)
+# ValueError
+# ValueError (1그릇밖에 안 남음)
+# 7000
+(stock 0, sold 3)
+# SoldOutError (매진)
+# 21000
+
+if __name__ == "__main__":
+main()
+
 
 # ============================================================
 #  아래는 확인용 코드입니다. 수정하지 않아도 됩니다.
